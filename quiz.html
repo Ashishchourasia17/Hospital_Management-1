@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .quiz-container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #next-btn {
+            display: none;
+        }
+
+        #score {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <div id="quiz">
+            <p id="question">Loading question...</p>
+            <div class="answers">
+                <button class="answer-btn" onclick="selectAnswer(this)">Answer 1</button>
+                <button class="answer-btn" onclick="selectAnswer(this)">Answer 2</button>
+                <button class="answer-btn" onclick="selectAnswer(this)">Answer 3</button>
+                <button class="answer-btn" onclick="selectAnswer(this)">Answer 4</button>
+            </div>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+        <p id="score"></p>
+    </div>
+    
+    <script>
+        // script.js
+
+        // Quiz data
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                answers: ["Berlin", "Madrid", "Paris", "Rome"],
+                correct: 2
+            },
+            {
+                question: "What is 2 + 2?",
+                answers: ["3", "4", "5", "6"],
+                correct: 1
+            },
+            {
+                question: "Who wrote 'To Kill a Mockingbird'?",
+                answers: ["Harper Lee", "Mark Twain", "J.K. Rowling", "Jane Austen"],
+                correct: 0
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        // Load the first question
+        function loadQuestion() {
+            const questionElement = document.getElementById("question");
+            const answerButtons = document.querySelectorAll(".answer-btn");
+
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+
+            answerButtons.forEach((button, index) => {
+                button.textContent = currentQuestion.answers[index];
+                button.dataset.correct = index === currentQuestion.correct;
+                button.disabled = false;
+                button.style.backgroundColor = "";
+            });
+
+            document.getElementById("next-btn").style.display = "none";
+        }
+
+        function selectAnswer(button) {
+            const answerButtons = document.querySelectorAll(".answer-btn");
+
+            answerButtons.forEach(btn => (btn.disabled = true));
+
+            if (button.dataset.correct === "true") {
+                button.style.backgroundColor = "green";
+                score++;
+            } else {
+                button.style.backgroundColor = "red";
+            }
+
+            document.getElementById("next-btn").style.display = "block";
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById("quiz").innerHTML = `<h2>Your Score: ${score}/${questions.length}</h2>`;
+                document.getElementById("next-btn").style.display = "none";
+            }
+        }
+
+        // Start the quiz
+        loadQuestion();
+
+    </script>
+</body>
+
+</html>

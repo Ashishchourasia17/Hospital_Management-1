@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    font-size: larger;
+    display: flex;
+    flex-direction: column; /* Ensure the body flows top to bottom */
+    align-items: center; /* Center form on the page */
+    background-color: blanchedalmond;
+    
+    
+    
+}
+.form{
+    /* border: 2px solid black; */
+    margin-top: 20px;
+    background-color: rgb(179, 215, 243);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; /* Items should be stacked vertically */
+    width: fit-content; /* Fit the content */
+    height: fit-content; /* Fit the content */
+    padding: 20px; /* Add some padding */
+    
+}
+input::placeholder{
+    color: rgb(19, 19, 198);
+}
+::selection{
+    color:blue;
+    background-color: black;
+}
+/* form {
+    display: flex;
+    flex-direction: column;
+} */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+        padding: 12px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .form {
+        padding: 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="file"], textarea, select {
+        font-size: 16px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        padding: 15px;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+        margin: 10px 0;
+        display: block;
+    }
+}

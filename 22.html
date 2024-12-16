@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transform and transition</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border: 2px solid saddlebrown;
+            display: block;
+            position: absolute;
+            /* transition-property: transform,background-color;
+            transition-duration: 2s;
+            transition-timing-function: cubic-bezier(0, 0.69, 0.34, 0.54);
+            transition-delay: 1s; */
+            transition: transform 2s cubic-bezier(0, 0.69, 0.34, 0.54) 1s;
+
+        }
+
+        .box2:hover {
+            /* transform:rotate(50deg) */
+            transform: translate(100%);
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"> </div>
+    <div class="box2"></div>
+</body>
+
+</html>

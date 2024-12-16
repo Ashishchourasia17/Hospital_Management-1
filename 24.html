@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+           
+        }
+        .calculator{
+           
+            background-color: blanchedalmond;
+            padding: 10px;
+            
+        }
+        .display{
+            width: 100%;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .buttons{
+
+            display: grid;
+            gap: 5px;
+            
+        }
+        button{
+        padding:5px;
+        font-size: 1.1rem;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="calculator">
+            <input type="text" class="display" id="display" disabled>
+            <div class="buttons">
+                <button onclick="appendnumber('7')">7</button>
+                <button onclick="appendnumber('8')">8</button>
+                <button onclick="appendnumber('9')">9</button>
+                <button onclick="appendoperator('+')">+</button>
+                <button onclick="appendnumber('4')">4</button>
+                <button onclick="appendnumber('5')">5</button>
+                <button onclick="appendnumber('6')">6</button>
+                <button onclick="appendoperator('-')">-</button>
+                <button onclick="appendnumber('1')">1</button>
+                <button onclick="appendnumber('2')">2</button>
+                <button onclick="appendnumber('3')">3</button>
+                <button onclick="appendoperator('*')">*</button>
+                <button onclick="appendnumber('0')">0</button>
+                <button onclick="appendnumber('.')">.</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendoperator('/')">/</button>
+                <button style="grid-column: span 4;" onclick="calculate()">=</button>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const display=document.getElementById('display')
+        function appendnumber(number){
+            display.value+=number;
+        }
+        function appendoperator(operator){
+            display.value+=`${operator}`;
+        }
+        function clearDisplay(){
+            display.value= '';
+        }
+        function calculate(){
+            try {
+                display.value = eval(display.value)
+            } catch (e) {
+                display.value = 'Error';
+            }
+        }
+       
+    </script>
+</body>
+</html>

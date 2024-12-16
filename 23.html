@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css animations</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: new 2s ease-in 1s 5 ;
+            border-radius: 50%;
+        }
+        @keyframes new {
+            from{
+
+            }
+            to{
+                transform: translate(1000px);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

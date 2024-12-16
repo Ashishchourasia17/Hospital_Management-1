@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(206, 206, 163);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .head{
+            position: sticky;
+            top: 0;
+        }
+
+        header {
+            font-size: xx-large;
+            text-align: center;
+            background-color: rgb(104, 104, 225);
+            color: white;
+            /* position: sticky;
+
+            top: 0;
+
+            z-index: 10; */
+
+
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+            align-items: center;
+            /* position: sticky;
+            top: 0; */
+
+
+        }
+
+        .list {
+            display: flex;
+            background-color: rgb(104, 104, 225);
+            padding: 15px;
+            border-radius: 50px;
+            gap: 35px;
+            font-size: x-large;
+
+
+
+        }
+
+        .i {
+            list-style-type: none;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+
+        }
+
+        a:hover {
+            background-color: rgb(92, 29, 200);
+            border-radius: 5px;
+
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            height: 500px;
+            margin: 8px;
+
+            background-image: url("manage.jpeg");
+            background-size: cover;
+
+        }
+
+        .banner p {
+            margin: 55px;
+            font-size: 70px;
+            color: #020658;
+        }
+
+        .appointment-form {
+            background: rgb(190, 190, 237);
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 5px;
+            max-width: 800px;
+        }
+
+        .appointment-form input,
+        .appointment-form select,
+        .appointment-form button {
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            border: 1px solid #b77e7e;
+            border-radius: 5px;
+        }
+
+        .appointment-form button {
+            background: rgb(104, 104, 225);
+            color: white;
+            border: none;
+            font-size: larger;
+        }
+
+        section h1 {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        footer {
+            background-color: rgb(104, 104, 225);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home,
+        .about,
+        .services {
+
+            margin: 10px;
+            height: 480px;
+            font-size: 28px;
+
+
+        }
+
+        div .home {
+            margin: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <header>
+            <h1>Hospital Management System</h1>
+        </header>
+        <div class="nav">
+            <ul class="list">
+                <li class="i"><a href="#home">Home</a></li>
+                <li class="i"><a href="#about">About us</a></li>
+                <li class="i"><a href="#services">Services</a></li>
+                <li class="i"><a href="#appointment">Appointments</a></li>
+                <li class="i"><a href="#contact">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <p>Your Health Our Responsibility</p>
+    </div>
+
+    <div id="home" class="home">
+
+        <h1 style="text-align:center;font-size: 35px; ">Welcome to Management System </h1>
+        At our Hospital Name, we bring advanced healthcare and seamless management together under one roof. Our
+        user-friendly Hospital Management System is designed to streamline hospital operations, enhance patient
+        care, and optimize administrative processes.
+        <br><br>
+
+        <b>Key Features:</b> <br><br>
+        <b>Patient-Centric Care:</b> Easily manage patient records, appointments, and treatment histories. <br>
+        <b> Efficient Staff Coordination:</b> Simplified scheduling and communication tools for doctors, nurses, and
+        other staff members.
+        <br>
+        <b>Integrated Billing System:</b> Transparent and accurate billing for patients and hospital administration.
+        <br>
+        <b>Real-Time Insights:</b> Comprehensive dashboards providing real-time data for better decision-making.
+        <br>
+        <b>Secure Data Handling:</b> Ensuring patient confidentiality with robust data security protocols. <br>
+        Whether you're a patient seeking the best care or a healthcare professional looking for an efficient way to
+        manage tasks, our platform is here to support you every step of the way. <br>
+
+
+    </div>
+
+    <div class="about" id="about">
+        <h1 style="text-align:center;font-size: 35px;
+        margin: 10px;">About us </h1>
+
+        Welcome to [Your Hospital Name]'s official website! We are dedicated to revolutionizing healthcare management by
+        leveraging advanced technology and patient-first principles. Our platform provides comprehensive solutions to
+        streamline operations, improve patient care, and ensure smooth communication between patients, healthcare
+        providers, and administrators. <br>
+
+        <b>What We Offer: </b>
+        <br>
+        Comprehensive Patient Management
+        Efficient tools to handle appointments, patient records, medical histories, and reports. <br>
+
+        Staff and Resource Coordination
+        Simplify doctor and staff scheduling while optimizing resource allocation for better efficiency. <br>
+
+
+        Pharmacy and Inventory Management
+        Maintain optimal stock levels with real-time inventory tracking and automated alerts. <br>
+
+        Data Security and Compliance
+        State-of-the-art encryption ensures sensitive information is safe and complies with global healthcare
+        regulations. <br>
+    </div>
+    <div class="services" id="services">
+        <br>
+        <h1 style="text-align:center;font-size: 35px;
+        margin: 10px;">Services </h1>
+
+
+
+        A hospital management system encompasses a wide range of services designed to enhance the efficiency of hospital
+        operations while ensuring excellent patient care. Below are the key services offered: <br><br>
+
+        <b> 1. Patient Management </b> <br>
+
+        <b> Online Appointment Scheduling: </b> Simplify appointment booking for patients. <br>
+        <b> Electronic Medical Records (EMR): </b> Maintain accurate patient histories, diagnoses, and treatment plans.
+        <br>
+        <b> Discharge Summaries: </b> Ensure timely and detailed summaries for discharged patients. <br><br>
+        <b> 2. Doctor and Staff Management </b> <br>
+        <b> Staff Scheduling: </b> Optimize duty rosters for doctors, nurses, and support staff. <br>
+        <b> Performance Tracking: </b> Monitor and evaluate staff efficiency and workload. <br>
+        <b>Communication Tools: </b> Facilitate seamless communication among medical teams. <br>
+
+    </div>
+
+    <section class="appointment-form" id="appointment">
+        <h1>Book an Appointment</h1>
+        <form>
+            <input type="text" placeholder="Enter Your Name" required>
+            <input type="email" placeholder="Enter Your Email" required>
+            <select>
+                <option>Select Department</option>
+                <option>Cardiology</option>
+                <option>Orthopedics</option>
+                <option>Neurology</option>
+                <option>Surgical department</option>
+            </select>
+
+            <input type="date" required>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2024 Hospital Management System. All Rights Reserved.</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+
+    </footer>
+
+</body>
+
+</html>

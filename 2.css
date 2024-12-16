@@ -1,0 +1,9 @@
+h1{
+    height: 50px;
+    width: 250px;
+    justify-content: center;
+    border: 5px solid black;
+    margin:5px;
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .quiz-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .question {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .answers {
+      margin-bottom: 20px;
+    }
+    .answers label {
+      display: block;
+      margin: 8px 0;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #result {
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Simple Quiz</h1>
+    <div id="quiz">
+      <div class="question">What is the capital of India?</div>
+      <div class="answers">
+        <label><input type="radio" name="answer" value="New Delhi"> New Delhi</label>
+        <label><input type="radio" name="answer" value="Mumbai"> Mumbai</label>
+        <label><input type="radio" name="answer" value="Kolkata"> Kolkata</label>
+        <label><input type="radio" name="answer" value="Chennai"> Chennai</label>
+      </div>
+    </div>
+    <button id="submit">Submit</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    const correctAnswer = "New Delhi";
+    const submitButton = document.getElementById("submit");
+    const resultDiv = document.getElementById("result");
+
+    submitButton.addEventListener("click", () => {
+      const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+      if (selectedAnswer) {
+        const answer = selectedAnswer.value;
+        if (answer === correctAnswer) {
+          resultDiv.textContent = "Correct! 🎉";
+          resultDiv.style.color = "green";
+        } else {
+          resultDiv.textContent = "Wrong! 😞";
+          resultDiv.style.color = "red";
+        }
+      } else {
+        resultDiv.textContent = "Please select an answer!";
+        resultDiv.style.color = "orange";
+      }
+    });
+  </script>
+</body>
+</html>

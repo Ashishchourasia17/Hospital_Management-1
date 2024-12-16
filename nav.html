@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url("tech.jpeg");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size:cover;
+            
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .logo {
+            width: 6.5%;
+            margin: 10px;
+        }
+
+        ul {
+            display: flex;
+            /* justify-content:space-between; */
+            margin: 20px;
+            gap: 50px;
+            list-style: none;
+            color: white;
+            font-size:x-large;
+
+            
+        }
+        a{
+            text-decoration:none ;
+            color: white;
+            padding: 10px 20px;
+        }
+        a:hover{
+            background-color: blueviolet;
+            /* transform: scale(1,1);  
+            transition: transform 0.5s ease; */
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .heading {
+            margin: 100px;
+            text-align: center;
+            font-size: 100px;
+            color: rgb(234, 166, 9)
+        }
+
+        .content {
+            font-size: larger;
+            color: #e26f11;
+            margin:10px;
+            padding:10px;
+            line-height: 2pc;
+
+        }
+        @media only screen and (max-width: 600px){
+            .nav{
+                flex-direction: column;
+            }
+            body{
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <img src="logo.jpg" alt="" class="logo">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Portofolio</a></li>
+            <li><a href="">Contact</a></li>
+
+        </ul>
+    </div>
+   
+
+    <div class="main">
+        <p class="heading">The Stunning website</p>
+        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, laborum. Facilis aperiam
+            similique repellat magni! Doloremque perferendis fuga cumque sed? Sunt id minima fuga voluptate voluptatum,
+            enim rerum. Facere, dicta!
+            Quae nesciunt hic dolorum eveniet alias, quaerat reiciendis magni similique ex sint, error laborum! Maiores
+            est ullam libero aliquid mollitia sint, unde aspernatur itaque eveniet, pariatur praesentium cum? Earum,
+            sit!
+            Tempora, consectetur numquam magni commodi culpa illum magnam autem nemo officia molestias aliquam qui
+            aperiam nesciunt animi, quisquam quasi sit minima quos sequi debitis repellendus nulla. Quidem natus aliquid
+            amet!
+            Doloremque reprehenderit amet assumenda veniam voluptatum placeat in architecto obcaecati, nesciunt
+            quisquam, eaque sint asperiores ipsum voluptatibus? Corporis nisi ipsam quas error itaque dolor id, eaque
+            suscipit sit, cumque facere.
+            Temporibus non quae ab nemo aut unde beatae dolor eveniet at deserunt, nulla error ducimus molestiae quaerat
+            facilis vero et laborum nobis commodi quidem, in est inventore tempora! Ad, totam.</p>
+    </div>
+</body>
+
+</html>

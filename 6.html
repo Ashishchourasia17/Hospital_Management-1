@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .navbar{
+            background-color: rgb(172, 172, 216);
+            display:flex;
+            justify-content: space-evenly;
+            
+
+        }
+        a{
+            text-decoration: none;
+           
+            
+        }
+        li{
+            list-style-type: none;
+        }
+        .outer{
+            background-color: blanchedalmond;
+            height: 300px;
+            width:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner{
+            background-color: chocolate;
+            height:100px;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+    </ul>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+</html>
